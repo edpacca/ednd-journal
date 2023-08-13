@@ -1,8 +1,6 @@
 <script lang="ts">
     import type { PageData } from "./$types";
     export let data: PageData;
-
-    // const date = formatDate(data.meta.date);
 </script>
 
 <!-- SEO -->
@@ -19,7 +17,7 @@
     </hgroup>
 
     <div class="contents">
-        <img src={`images/${data.meta.img}`}
+        <img src={`/npcs/${data.meta.img}`}
             alt={`${data.meta.name} image`}
             loading="lazy"
             class="token"/>
