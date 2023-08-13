@@ -15,8 +15,8 @@ async function getNpcs() {
 
         if (valid) {
             const metadata = file.metadata as Omit<Npc, "slug">;
-            const post = { ...metadata, slug } satisfies Npc;
-            post.published && npcs.push(post);
+            const npc = { ...metadata, slug } satisfies Npc;
+            npc.published && npcs.push(npc);
         }
     }
 

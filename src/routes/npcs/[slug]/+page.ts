@@ -2,11 +2,11 @@ import { error } from "@sveltejs/kit"
 
 export async function load({ params }) {
     try {
-        const post = await import(`../../posts/${params.slug}.md`);
+        const npc = await import(`../../../static/npcs/${params.slug}.md`);
 
         return {
-            content: post.default,
-            meta: post.metadata
+            content: npc.default,
+            meta: npc.metadata
         }
     } catch (e) {
         throw error(404, `Hmmm couldn't find ${params.slug}`)

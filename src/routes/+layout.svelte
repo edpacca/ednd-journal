@@ -6,7 +6,7 @@
 
 <Nav/>
 <main>
-    <BackgroundBorder colour="burlywood" opacity={0.4}/>
+    <!-- <BackgroundBorder colour="burlywood" opacity={0.4}/> -->
     <slot/>
 </main>
 <footer>

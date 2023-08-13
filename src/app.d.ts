@@ -11,6 +11,11 @@ declare global {
 		published: boolean
 		img?: string
 		icon?: string
+		race: string
+		gender: string
+		dnd_class: string
+		alignment: string
+		languages: string[]
 	}
 
 }
