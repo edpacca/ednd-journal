@@ -23,6 +23,8 @@
         background-color: rgba(0, 0, 0, 0.5);
         padding: 0.1em;
         display: flex;
+        align-items: center;
+        gap: 1em;
     }
     
     .list-item a {
