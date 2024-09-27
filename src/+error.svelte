@@ -3,4 +3,4 @@
 </script>
   
 <h1>Errkkkk - an error</h1>
-<h1>{$page.status}: {$page.error.message}</h1>
+<h1>{$page.status}: {$page.error ? $page.error.message : ""}</h1>

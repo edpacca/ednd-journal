@@ -1,8 +1,9 @@
 <script lang="ts">
-    import type { PageData } from './$types';
-  
-    export let data: PageData;
+    import type { PageData } from "./$types";
+	export let data: PageData;
 </script>
 
-<h1>{data.title}</h1>
-<div>{@html data.content}</div>
+<div class="parchment">
+    <h1>{data.journal.title}</h1>
+    <div class="text">{data.journal.content}</div>
+</div>

@@ -5,7 +5,7 @@
     --primary-50: rgba(165, 42, 42, 0.5);
     --secondary-50: rgba(222, 184, 135, 0.5);
     
-    --white: antiquewhite;
+    --white: rgb(250, 227, 198);
     --black: rgb(30, 30, 30);
 
     --light-grey: rgb(150, 150, 150);
@@ -36,7 +36,7 @@
 
     --default-spacing: 8px;
 
-    --background-url: url("/background/water-parchment.webp");
+    --background-url: url("/background/water-parchment-dark.webp");
 }
 
 body {
@@ -44,6 +44,7 @@ body {
     height: 100%;
     width: 100%;
     font-family: "RobotoCondensed", Times, serif;
+    color: var(--white);
 }
 
 html, .body {
@@ -51,6 +52,7 @@ html, .body {
     flex-direction: column;
     height: 100%;
     width: 100%;
+    background: burlywood;
 }
 
 /* Colours */
@@ -86,4 +88,36 @@ h3 {
     row-gap: var(--default-spacing);
 }
 
+.content {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    height: 100%;
+    padding: 0 10%;
+}
 
+.content-sidebar {
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    z-index: 2;
+    height: 100%;
+    position: relative;
+}
+
+.text {
+    font-size: 1.4rem;
+    text-align: justify;
+    line-height: 1.8rem;
+    white-space: pre-line;
+    font-family: "Charm";
+}
+
+.parchment {
+    background-image: url("/background/parchment-light.webp");
+    background-repeat: repeat-y;
+    background-position: top;
+    background-size: 100%;
+    padding: 2rem 10% 5rem;
+    color: rgb(47, 12, 12);
+    background-attachment: scroll;
+}

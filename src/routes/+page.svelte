@@ -1,18 +1,17 @@
 <script lang="ts">
-    import Button from "../components/common/Button.svelte";
-    import { UserType } from "../lib/types";
-    import { getCampaigns } from "../server/dummyServer";
-    import { currentCampaign, userType } from "../state/store";
+    import Button from "../lib/components/common/Button.svelte";
+    import { Campaign, UserType } from "../lib/types";
+    import { currentCampaign, userType } from "../stores/store";
 
     const setUserType = (userType: UserType) => {
         $userType = userType;
     }
 
-    const campaigns: string[] = getCampaigns();
+    const campaigns: string[] = Object.values(Campaign);
 </script>
-<h1>Edpacca's Isle of Murraka</h1>
 
-<div>
+<div class="content">
+    <h1>Edpacca's Isle of Murraka</h1>
     {#if !$userType}
         <p>Welcome traveller.</p>
         <p>How do we find you today?</p>
@@ -20,7 +19,7 @@
             <Button content="player" onClick={() => setUserType(UserType.PLAYER)}/>
             <Button content="visitor" onClick={() => setUserType(UserType.VISITOR)}/>
         </div>
-    {:else if $userType === "player" && $currentCampaign === ""}
+    {:else if $userType === "player" && !$currentCampaign}
         <p>Select your campaign</p>
         <div class="button-menu">
             {#each campaigns as campaign}

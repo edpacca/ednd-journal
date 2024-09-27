@@ -1,9 +1,9 @@
 import { writable, type Writable } from "svelte/store";
-import { UserType } from "../lib/types";
+import { Campaign, UserType } from "../lib/types";
 
 const defaultState = {
     userType: UserType.PLAYER,
-    campaign: "Gangbangers"
+    campaign: Campaign.GB
 }
 
 export const userType: Writable<UserType | undefined> = writable(defaultState.userType);

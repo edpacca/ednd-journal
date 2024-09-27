@@ -1,1 +1,1 @@
-<h1>Journal</h1>
+<h1>Journal entries</h1>

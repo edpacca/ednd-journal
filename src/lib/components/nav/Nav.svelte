@@ -1,6 +1,5 @@
 <script>
-    import { UserType } from "$lib/types";
-import { currentCampaign, userType } from "../../state/store";
+    import { currentCampaign, userType } from "../../../stores/store";
     import XButton from "../common/XButton.svelte";
 
     const resetUser = () => {
@@ -10,9 +9,9 @@ import { currentCampaign, userType } from "../../state/store";
 </script>
 
 <nav>
-    <a href="/" class="nav-link">Home</a>
-    <a href="/locations" class="nav-link">Locations</a>
-    <a href="/npcs" class="nav-link">NPCs</a>
+    <a href="/" class="nav-link">Home</a> | 
+    <a href="/locations" class="nav-link">Locations</a> |
+    <a href="/npcs" class="nav-link">NPCs</a> |
     <a href="/journal" class="nav-link">Journal</a>
 
     <div class="user-info">
@@ -27,7 +26,6 @@ import { currentCampaign, userType } from "../../state/store";
             </select>
         {/if}
     </div>
-
 </nav>
 
 <style>
@@ -66,5 +64,10 @@ import { currentCampaign, userType } from "../../state/store";
 
     option {
         color: var(--grey)
+    }
+
+    a {
+        color: brown;
+        text-decoration: none;
     }
 </style>
